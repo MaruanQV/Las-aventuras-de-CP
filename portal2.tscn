@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://portals2.tscn" type="PackedScene" id=1]
+[ext_resource path="res://portals2.gd" type="Script" id=2]
+
+[node name="portal2" type="Node2D"]
+
+[node name="portals2" parent="." instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[connection signal="body_entered" from="portals2" to="portals2" method="_on_portals2_body_entered"]

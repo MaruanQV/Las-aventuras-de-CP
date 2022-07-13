@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://portal1.tscn" type="PackedScene" id=1]
+
+[node name="portals" type="Node2D"]
+
+[node name="portal1" parent="." instance=ExtResource( 1 )]
+position = Vector2( 56, 87 )
+escena = "MapaDesert"
+
+[connection signal="body_entered" from="portal1" to="portal1" method="_on_portal1_body_entered"]
